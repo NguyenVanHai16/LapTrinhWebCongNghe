@@ -38,3 +38,27 @@ def about():
 @main.route('/contact')
 def contact():
     return render_template('main/contact.html', title='Liên hệ')
+
+@main.route('/terms')
+def terms():
+    return render_template('main/terms.html', title='Điều khoản sử dụng')
+
+@main.route('/privacy')
+def privacy():
+    return render_template('main/privacy.html', title='Chính sách bảo mật')
+
+@main.route('/guide')
+def guide():
+    return render_template('main/guide.html', title='Hướng dẫn mua hàng')
+
+@main.route('/payment')
+def payment():
+    return render_template('main/payment.html', title='Phương thức thanh toán')
+
+@main.route('/shipping')
+def shipping():
+    return render_template('main/shipping.html', title='Chính sách vận chuyển')
+
+@main.route('/warranty')
+def warranty():
+    return render_template('main/warranty.html', title='Chính sách bảo hành')

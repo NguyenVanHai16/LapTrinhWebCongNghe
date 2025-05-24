@@ -3,7 +3,7 @@
 {% block title %}{{ title }}{% endblock %}
 
 {% block styles %}
-<link rel="stylesheet" href="{{ url_for('static', filename='css/login_register.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 <style>
     /* Ẩn modal mặc định */
@@ -43,12 +43,6 @@
         <div class="auth-header">
             <h2>Đăng nhập</h2>
             <p>Đăng nhập vào tài khoản TechMart của bạn</p>
-        </div>
-
-        <!-- Tabs -->
-        <div class="auth-tabs">
-            <div class="auth-tab active">Đăng nhập</div>
-            <div class="auth-tab"><a href="{{ url_for('auth.register') }}">Đăng ký</a></div>
         </div>
 
         <form method="POST" action="" class="auth-form">
@@ -122,6 +116,7 @@
 {% endblock %}
 
 {% block scripts %}
+{{ super() }}
 <script>
     document.addEventListener('DOMContentLoaded', function () {
         // Chuyển đổi hiển thị mật khẩu
